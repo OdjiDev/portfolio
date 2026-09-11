@@ -3,119 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ouzairou DJIRE | Portfolio</title>
+    <title>Ouzairou DJIRE | Ingénieur SI & Chef de Projet IT</title>
+    
+    <!-- Meta tags SEO & OpenGraph -->
+    <meta name="description" content="Portfolio de Ouzairou DJIRE - Ingénieur Systèmes d'Information, Chef de Projet IT et Architecte Solutions Digitales.">
+    <meta property="og:title" content="Ouzairou DJIRE | Ingénieur SI & Chef de Projet IT">
+    <meta property="og:description" content="Découvrez mes projets d'architecture logicielle, d'AMOA et de gestion d'infrastructures IT.">
+    
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Header Navigation -->
     <header class="header">
         <a href="#" class="logo">&lt;Ouzairou.Dev /&gt;</a>
-        <nav class="navbar">
+        
+        <nav class="navbar" id="navbar">
             <a href="#about">À propos</a>
-            <a href="#experience">Expériences</a>
-            <a href="#projects">Projets</a>
+            <a href="#kpi">Impact</a>
+            <a href="#projects">Projets & Architecture</a>
+            <a href="#experience">Parcours</a>
             <a href="#skills">Compétences</a>
-            <a href="#education">Formation</a>
             <a href="#contact">Contact</a>
         </nav>
-        <button id="theme-toggle" class="theme-btn" aria-label="Changer de thème"><i class="fas fa-moon"></i></button>
+
+        <div class="header-actions">
+            <a href="assets/CV_Djire_Ouzairou.pdf" download="CV_Ouzairou_DJIRE.pdf" class="btn-cv-nav">
+                <i class="fas fa-file-pdf"></i> CV PDF
+            </a>
+            <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème"><i class="fas fa-moon"></i></button>
+            <button id="menu-toggle" class="icon-btn mobile-only" aria-label="Menu"><i class="fas fa-bars"></i></button>
+        </div>
     </header>
 
-    <!-- Section Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Bonjour, je suis <span class="highlight">Ouzairou DJIRE</span></h1>
-            <h2>Ingénieur Systèmes d'Information | Chef de Projet IT | Architecte de Solutions Digitales</h2>
-            <p>Plus de 5 années d'expérience en gestion de projet, développement Full-Stack, administration réseau et formation technique.</p>
+            <span class="badge">Ingénierie & Leadership IT</span>
+            <h1>Ouzairou DJIRE</h1>
+            <h2>Ingénieur Systèmes d'Information | Chef de Projet IT | Architecte Solutions</h2>
+            <p>Plus de 5 ans d'expertise dans le pilotage de projets informatiques complexes, l'architecture logicielle, la Maîtrise d'Ouvrage (AMOA) et l'optimisation des infrastructures réseaux.</p>
+            
             <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">Découvrir mes projets</a>
-                <a href="#contact" class="btn secondary-btn">Me contacter</a>
-                <a href="assets/CV_Djire_Ouzairou .pdf" download="CV_Ouzairou_DJIRE.pdf" class="btn secondary-btn">
-                <i class="fas fa-file-download"></i> Télécharger CV
-            </a>
+                <a href="#projects" class="btn primary-btn">Consulter mes cas d'études</a>
+                <a href="assets/CV_Ouzairou_DJIRE.pdf" download="CV_Ouzairou_DJIRE.pdf" class="btn secondary-btn">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Section À Propos -->
-    <section id="about" class="section">
-        <h2 class="section-title">À Propos</h2>
-        <div class="about-card">
-            <p>
-                Chef de Projet MOA & Architecte de Solutions Digitales, ancien Assistant Maîtrise d'Ouvrage chez Orange Money. 
-                Leader technique ayant encadré et mené à la soutenance avec 100% de succès 7 projets de licence. 
-                Capacité démontrée à piloter des solutions IT complexes, gérer un parc informatique en autonomie et fédérer des équipes autour d'objectifs communs.
-            </p>
+    <!-- Section Métriques d'Impact (KPIs) -->
+        <section id="kpi" class="kpi-section">
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <span class="kpi-number">5+</span>
+                <span class="kpi-label">Années d'expérience IT</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">100%</span>
+                <span class="kpi-label">Succès soutenances (7 Projets encadrés)</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">+25%</span>
+                <span class="kpi-label">Croissance ventes (Projet Stock)</span>
+            </div>
+            <div class="kpi-card">
+                <span class="kpi-number">99.9%</span>
+                <span class="kpi-label">Disponibilité du SI FSEG</span>
+            </div>
+        </div>
+        </section>
+        <div class="projects-grid">
+            
+            <!-- Projet 1 -->
+            <div class="project-card" data-category="dev">
+                <div class="project-header">
+                    <span class="project-type">Architecture & Déploiement</span>
+                    <h3>Serveur de Mise à Jour Automatisé (FSEG)</h3>
+                </div>
+                <div class="project-body">
+                    <p><strong>Problématique :</strong> Nécessité de centraliser et d'automatiser le déploiement des mises à jour des logiciels d'administration au sein de la Faculté.</p>
+                    <p><strong>Solution :</strong> Architecture robuste basée sur Spring Boot, Angular et un serveur VSFTPD sécurisé avec déclenchement automatique des livrables.</p>
+                </div>
+                <div class="tags">
+                    <span>Angular 17</span><span>Spring Boot 3.2.5</span><span>VSFTPD</span><span>Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card" data-category="dev">
+                <div class="project-header">
+                    <span class="project-type">Application Métier & KPI</span>
+                    <h3>Système Intégré de Gestion de Stock</h3>
+                </div>
+                <div class="project-body">
+                    <p><strong>Problématique :</strong> Optimisation du flux commercial et réduction des erreurs de traçabilité d'inventaire.</p>
+                    <p><strong>Résultat :</strong> Augmentation mesurée de 25% des ventes grâce à une meilleure réactivité d'approvisionnement et un suivi analytique clair.</p>
+                </div>
+                <div class="tags">
+                    <span>Angular 17</span><span>Spring Boot 3.2.5</span><span>MySQL</span><span>REST API</span>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="project-card" data-category="amoa">
+                <div class="project-header">
+                    <span class="project-type">AMOA / Mobile Money</span>
+                    <h3>Recette & Spécifications Orange Money</h3>
+                </div>
+                <div class="project-body">
+                    <p><strong>Rôle :</strong> Assistant Maîtrise d'Ouvrage (Orange Mali).</p>
+                    <p><strong>Réalisation :</strong> Rédaction des SFG/SFD, pilotage des rituels Agiles sous Jira, conception des campagnes de recette fonctionnelle pour des services à fort trafic.</p>
+                </div>
+                <div class="tags">
+                    <span>AMOA</span><span>SFG / SFD</span><span>Jira</span><span>Scrum</span><span>Recette</span>
+                </div>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="project-card" data-category="infra">
+                <div class="project-header">
+                    <span class="project-type">Systèmes & Réseaux</span>
+                    <h3>Infrastructure Réseau & Sécurité FSEG / ECOSUP</h3>
+                </div>
+                <div class="project-body">
+                    <p><strong>Problématique :</strong> Administration critique d'un parc informatique pour des centaines d'utilisateurs et sécurisation des accès académiques.</p>
+                    <p><strong>Solution :</strong> Administration Active Directory, Windows Server 2019, routage compact et déploiement de vidéosurveillance IP.</p>
+                </div>
+                <div class="tags">
+                    <span>Windows Server 2019</span><span>Active Directory</span><span>Cisco</span><span>Vidéosurveillance IP</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Section Expériences Professionnelles -->
+    <!-- Section Expériences -->
     <section id="experience" class="section">
-        <h2 class="section-title">Expériences Professionnelles</h2>
+        <h2 class="section-title">Parcours Professionnel</h2>
         <div class="timeline">
             
             <div class="timeline-item">
-                <div class="timeline-date">2024 - Présent</div>
+                <span class="timeline-date">2024 - Présent</span>
                 <div class="timeline-content">
                     <h3>Référent IT & Support Technique</h3>
-                    <h4>Faculté des Sciences Économiques et de Gestion (FSEG) — Bamako</h4>
+                    <p class="company">Faculté des Sciences Économiques et de Gestion (FSEG) | Bamako</p>
                     <ul>
-                        <li>Responsable unique de la gestion des incidents et support technique auprès du personnel administratif, enseignants et étudiants.</li>
-                        <li>Administration, maintenance préventive/curative et sécurisation globale du parc informatique.</li>
-                        <li>Gestion de l'infrastructure réseau (câblage, switchs, accès Wi-Fi, pannes de connectivité).</li>
-                        <li>Maintien d'un taux de disponibilité du SI proche de 100% lors des périodes critiques d'examens et d'inscriptions.</li>
+                        <li>Gouvernance et maintenance d'urgence du système d'information de la faculté.</li>
+                        <li>Gestion de l'infrastructure réseau locale (commutation, câblage, Wi-Fi) et résolution d'incidents critiques.</li>
+                        <li>Maintien d'un taux de disponibilité proche de 100% durant les examens et inscriptions.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">2025 - 2026</div>
+                <span class="timeline-date">2025 - 2026</span>
                 <div class="timeline-content">
-                    <h3>Leader Technique — Encadrement Académique</h3>
-                    <h4>ECOSUP & UAM</h4>
+                    <h3>Leader Technique & Encadrement Académique</h3>
+                    <p class="company">ECOSUP / UAM</p>
                     <ul>
-                        <li>Encadrement complet de 7 projets de licence (cadrage, suivi hebdomadaire, relecture de code, préparation aux soutenances).</li>
-                        <li>Taux de réussite de 100% aux soutenances sur des sujets variés (systèmes, réseaux, applications métiers).</li>
+                        <li>Direction technique et cadrage méthodologique de 7 projets de fin d'études en Licence.</li>
+                        <li>Relecture de code, validation d'architectures logicielles & réseaux, 100% de taux de réussite aux soutenances.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">2023 - 2024</div>
+                <span class="timeline-date">2023 - 2024</span>
                 <div class="timeline-content">
-                    <h3>Formateur — Orange Digital Center (ODC)</h3>
-                    <h4>Groupe Orange Mali — Bamako</h4>
+                    <h3>Formateur Technique - Systèmes Embarqués</h3>
+                    <p class="company">Orange Digital Center (ODC) | Groupe Orange Mali</p>
                     <ul>
-                        <li>Animation de sessions intensives sur l'Électronique et les Systèmes Embarqués.</li>
-                        <li>Transmission de compétences en gestion de projet, leadership, prise de parole en public et suivi/évaluation.</li>
+                        <li>Animation de sessions de formation en Systèmes Embarqués, Électronique et IoT.</li>
+                        <li>Transfert de compétences sur le Leadership, la Gestion de projet et la Prise de parole en public.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-date">2022 - 2023</div>
+                <span class="timeline-date">2022 - 2023</span>
                 <div class="timeline-content">
-                    <h3>Assistant Maîtrise d'Ouvrage (AMOA) — Orange Money</h3>
-                    <h4>Orange Mali — Bamako</h4>
+                    <h3>Assistant Maîtrise d'Ouvrage (AMOA)</h3>
+                    <p class="company">Orange Money | Orange Mali</p>
                     <ul>
-                        <li>Recueil, formalisation des besoins et rédaction des Spécifications Fonctionnelles (SFG / SFD).</li>
-                        <li>Participation aux rituels Agiles (Daily, Sprint Planning, Review, Rétrospectives) et suivi des KPI sur Jira.</li>
-                        <li>Conception et exécution des campagnes de recette fonctionnelle pour un déploiement sans incident.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-date">2021 / 2025</div>
-                <div class="timeline-content">
-                    <h3>Gestionnaire IT & Administrateur Réseau</h3>
-                    <h4>ECOSUP / ALTERNANCE / UAM / TechnoLab Ista</h4>
-                    <ul>
-                        <li>Configuration de services Windows Server 2019 (DHCP, DNS, Active Directory, Partages).</li>
-                        <li>Mise en place de solutions réseau (routage compact) et de vidéoprotection IP.</li>
+                        <li>Recueil et formalisation des besoins métiers (Marketing, Commercial, Technique).</li>
+                        <li>Rédaction des Spécifications Fonctionnelles Générales et Détaillées (SFG/SFD).</li>
+                        <li>Conception et exécution des cahiers de recette pour des déploiements sans interruption.</li>
                     </ul>
                 </div>
             </div>
@@ -123,118 +198,56 @@
         </div>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projets Développés</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <h3>Serveur de mise à jour d'application (FSEG)</h3>
-                <p>Système de déclenchement automatique des mises à jour logicielles pour les ressources de l'administration FSEG.</p>
-                <div class="tags">
-                    <span>Angular 17</span>
-                    <span>Spring Boot 3.2.5</span>
-                    <span>Bootstrap</span>
-                    <span>VSFTPD</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Application de Gestion de Stock</h3>
-                <p>Solution complète de gestion commerciale ayant permis une augmentation mesurée de 25% des ventes.</p>
-                <div class="tags">
-                    <span>Angular 17</span>
-                    <span>Spring Boot 3.2.5</span>
-                    <span>Bootstrap</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Gestion de Vente de Véhicules</h3>
-                <p>Application métier ayant amélioré la traçabilité et réduit le temps global de traitement de 40%.</p>
-                <div class="tags">
-                    <span>Laravel</span>
-                    <span>PHP</span>
-                    <span>Bootstrap</span>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Section Compétences -->
+    <!-- Section Compétences Stratégiques -->
     <section id="skills" class="section">
-        <h2 class="section-title">Compétences Techniques & Soft Skills</h2>
+        <h2 class="section-title">Compétences & Stack Technique</h2>
+        
         <div class="skills-grid">
-            
             <div class="skill-card">
-                <i class="fas fa-code skill-icon"></i>
-                <h3>Développement Back-end</h3>
-                <p>Java (Spring Boot 3.2.x), PHP (Laravel), Python (Django), JavaScript (Node.js)</p>
-            </div>
-
-            <div class="skill-card">
-                <i class="fas fa-desktop skill-icon"></i>
-                <h3>Développement Front-end</h3>
-                <p>Angular 18, React, HTML5 / CSS3, Bootstrap</p>
+                <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Gouvernance & AMOA</h3>
+                <p>Gestion de Projet Agile/Scrum, Rédaction SFG/SFD, Recette fonctionnelle, Suivi KPI sur Jira, Management d'équipe.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fas fa-brain skill-icon"></i>
-                <h3>Data / IA / Modélisation</h3>
-                <p>Data Analysis, Machine Learning, Big Data, Modélisation prédictive & classification</p>
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Back-End & Architectures</h3>
+                <p>Java (Spring Boot 3.2.x), PHP (Laravel), Python (Django), Node.js, Architecture Microservices, REST APIs.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fas fa-tasks skill-icon"></i>
-                <h3>Gestion de Projet & Méthodes</h3>
-                <p>MOA/AMOA, Rédaction SFG/SFD, Méthodes Agiles (Scrum), Jira, Leadership, Encadrement</p>
+                <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Front-End & Mobile</h3>
+                <p>Angular 18, React, HTML5/CSS3/Sass, Bootstrap, Flutter, Clean Architecture Mobile.</p>
             </div>
 
             <div class="skill-card">
-                <i class="fas fa-server skill-icon"></i>
-                <h3>Systèmes & Réseaux</h3>
-                <p>Windows Server 2019 (AD, DNS, DHCP), Linux (VSFTPD), Routage compact, Vidéosurveillance IP</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Section Formations -->
-    <section id="education" class="section">
-        <h2 class="section-title">Formation & Diplômes</h2>
-        <div class="education-grid">
-            <div class="edu-card">
-                <span class="edu-year">2023</span>
-                <h3>Master 2 en Ingénierie des Systèmes d'Information</h3>
-                <p>École Nationale d'Ingénieurs Abderrahmane Baba Touré (ENI-ABT)</p>
-            </div>
-            <div class="edu-card">
-                <span class="edu-year">2017 - 2020</span>
-                <h3>Licence en Génie Informatique et Télécommunication</h3>
-                <p>École Nationale d'Ingénieurs Abderrahmane Baba Touré (ENI-ABT)</p>
+                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Systèmes, Réseaux & DevOps</h3>
+                <p>Windows Server 2019 (AD, DNS, DHCP), Linux (VSFTPD), Docker, Git, Routage Cisco, Vidéosurveillance IP.</p>
             </div>
         </div>
     </section>
 
     <!-- Section Contact -->
     <section id="contact" class="section">
-        <h2 class="section-title">Me Contacter</h2>
-        <div class="contact-container">
-            <div class="contact-info">
+        <h2 class="section-title">Démarrer une Collaboration</h2>
+        <div class="contact-grid">
+            <div class="contact-details">
+                <h3>Contact Direct</h3>
                 <p><i class="fas fa-envelope"></i> ouzairoudjire67@gmail.com</p>
-                <p><i class="fas fa-envelope"></i> ouzairoudjire@fseg-ussgb.net</p>
+                <p><i class="fas fa-envelope-open-text"></i> ouzairoudjire@fseg-ussgb.net</p>
                 <p><i class="fas fa-phone"></i> +223 77 91 51 03</p>
                 <p><i class="fas fa-map-marker-alt"></i> Bamako, Mali</p>
                 <p><i class="fab fa-github"></i> <a href="https://github.com/OdjiDev" target="_blank" rel="noopener">github.com/OdjiDev</a></p>
             </div>
 
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="Votre Nom et Prénom" required>
-                <input type="email" placeholder="Votre adresse e-mail" required>
-                <input type="text" placeholder="Sujet" required>
-                <textarea placeholder="Votre message..." rows="5" required></textarea>
-                <button type="submit" class="btn primary-btn">Envoyer le message</button>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mgaeqpza" method="POST">
+                <input type="text" name="name" placeholder="Votre Nom & Organisation" required>
+                <input type="email" name="email" placeholder="Adresse email professionnelle" required>
+                <input type="text" name="subject" placeholder="Objet de la prise de contact" required>
+                <textarea name="message" placeholder="Présentez brièvement votre besoin ou projet..." rows="5" required></textarea>
+                <button type="submit" class="btn primary-btn" id="submitBtn">Envoyer la demande</button>
             </form>
         </div>
     </section>
